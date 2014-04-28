@@ -52,9 +52,10 @@ makeCacheMatrix <- function(x = matrix()) {
                 lstMatrix <<- append(lstMatrix,list(c(x)))
                 returnValue <- lstInverse[[length(lstInverse)]]
             }
-            #return the newly created inverse
+            
         }
     }
+    #Return the newly created inverse in vector format
     returnValue
 }
 
@@ -65,11 +66,9 @@ cacheSolve <- function(x, ...) {
     #Store returned vector
     invMatrix <- makeCacheMatrix(x)
     
-    #calculate the dimensions of the matrix by getting th square root of the length of the returned vector
+    #Calculate the dimensions of the matrix by getting th square root of the length of the returned vector
     dim <- sqrt(length(invMatrix))
 
-    #cast the vector to a matrix
+    #Cast the vector to a matrix
     matrix(invMatrix,dim,dim)
-#     }
-
 }
