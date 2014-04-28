@@ -62,10 +62,10 @@ makeCacheMatrix <- function(x = matrix()) {
 ## cacheSolve:  Makes a call to makeCacheMatrix to retrieve the inverse of a matrix. This function will only calculate
 ##              the inverse if it hasn't been calculated before.
 cacheSolve <- function(x, ...) {
-    #Check for error messages returned by 
+    #Store returned vector
     invMatrix <- makeCacheMatrix(x)
     
-    #calculate the dimensions of the matrix
+    #calculate the dimensions of the matrix by getting th square root of the length of the returned vector
     dim <- sqrt(length(invMatrix))
 
     #cast the vector to a matrix
