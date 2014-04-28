@@ -1,6 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
-
 ## makeCacheMatrix: Takes in a matrix and stores its inverse. The matrix that is passed in is converted to a vector and
 ##                  stored in a global variable called lstMatrix. At the same time, the inverse of the matrix is calculated
 ##                  and converted to a vector which is stored in a global variable called lstInverse. 
